@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="ByNass: Somalisch afhaalrestaurant in Amsterdam West. Bestel via WhatsApp.">
+<meta name="description" content="Ik ben Nasra. Ontdek mijn verse Somalische gerechten bij ByNass. Bestel via WhatsApp en haal je maaltijd op in Amsterdam West.">
 <link rel="icon" href="img/logo.png">
 <title>ByNass</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -244,6 +244,7 @@ footer small { font-size: .9rem; }
  .strip { grid-template-columns:repeat(5,minmax(145px,42%)); }
  .strip figure { scroll-snap-align:start; }
 }
+.label::before { display:none; }
 </style>
 </head>
 <body>
@@ -265,8 +266,8 @@ footer small { font-size: .9rem; }
 <header class="hero" id="top">
   <div class="wrap">
     <div class="hero-text">
-      <h1>Somalisch eten, <span>zoals thuis.</span></h1>
-      <p>Elke dag vers gekookt door Nasra. Afhalen in Amsterdam West, op afspraak.</p>
+      <h1>Ontdek mijn <span>Somalische keuken.</span></h1>
+      <p>Ik ben Nasra. Ik kook elke dag verse Somalische gerechten voor je. Al vertrouwd met de smaken of benieuwd naar iets nieuws? Je bent welkom. Je haalt je bestelling op in Amsterdam West.</p>
       <div class="cta">
         <a class="btn" href="#bestellen">Bestel nu</a>
         <a class="btn ghost" href="#menu">Bekijk menu</a>
@@ -282,7 +283,7 @@ footer small { font-size: .9rem; }
     </div>
   </div>
 </header>
-<div class="stripe" aria-hidden="true"></div>
+
 
 <main>
   <section class="block" id="menu" aria-labelledby="h-menu">
@@ -299,14 +300,14 @@ footer small { font-size: .9rem; }
         <div class="m-col">
           <h3 class="m-group">Hoofdgerechten <small>met salade &amp; drankje</small></h3>
           <ul class="m-list">
-          <li><div class="m-name"><span>Rijst met Vlees</span><small>Een rijstmaaltijd met vlees, salade en een drankje. Vraag naar de vleessoort van vandaag.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€22</span></li>
+          <li><div class="m-name"><span>Rijst met Vlees</span><small>Een rijstmaaltijd met vlees, salade en een drankje. Vraag me welk vlees ik vandaag bereid.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€22</span></li>
           <li><div class="m-name"><span>Rijst met Kip</span><small>Een rijstmaaltijd met kip, salade en een drankje.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€19</span></li>
-          <li><div class="m-name"><span>Pasta</span><small>Een pastamaaltijd met salade en een drankje. Vraag naar de bereiding van vandaag.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€15</span></li>
+          <li><div class="m-name"><span>Pasta</span><small>Een pastamaaltijd met salade en een drankje. Vraag me hoe ik de pasta vandaag bereid.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€15</span></li>
           </ul>
           <h3 class="m-group">Extra's</h3>
           <ul class="m-list">
-          <li><div class="m-name"><span>Sambusa</span><small>2 gevulde, krokante driehoekjes. Vraag naar de vulling.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€5</span></li>
-          <li><div class="m-name"><span>Mash Mash</span><small>Dik &amp; krokant gebak. Vraag naar de bereiding.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€1,50</span></li>
+          <li><div class="m-name"><span>Sambusa</span><small>2 gevulde, krokante driehoekjes. Vraag me naar de vulling.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€5</span></li>
+          <li><div class="m-name"><span>Mash Mash</span><small>Dik &amp; krokant gebak. Vraag me hoe ik het bereid.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€1,50</span></li>
           <li><div class="m-name"><span>Muufo</span><small>2 stuks Somalisch brood</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€3</span></li>
           <li><div class="m-name"><span>Canjeero</span><small>6 luchtige Somalische pannenkoekjes</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€4</span></li>
           <li><div class="m-name"><span>Malawax</span><small>6 dunne, zoete pannenkoekjes</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€4</span></li>
@@ -346,9 +347,9 @@ footer small { font-size: .9rem; }
           </div>
           <div id="included-drinks"></div>
           <label for="o-notes">Opmerkingen of allergieën<textarea id="o-notes" rows="3" maxlength="500" placeholder="Bijvoorbeeld een vraag over ingrediënten"></textarea></label>
-          <p class="note" id="pickup-note">Elke dag afhalen op afspraak. Reken op ongeveer 1–2 uur bereiding; Nasra bevestigt de beschikbaarheid en je afhaaltijd.</p>
+          <p class="note" id="pickup-note">Ik kook elke dag op bestelling. Ik heb ongeveer 1 tot 2 uur nodig en bevestig je afhaaltijd persoonlijk via WhatsApp.</p>
           <a class="btn" id="wa-btn" href="https://wa.me/31685477929" target="_blank" rel="noopener" aria-disabled="true">Verstuur via WhatsApp</a>
-          <p class="note">Je bestelling is definitief na onze bevestiging via WhatsApp.</p><p class="note">Betalen bij afhalen. Het adres ontvang je na bevestiging.</p>
+          <p class="note">Je bestelling is definitief zodra ik deze via WhatsApp heb bevestigd.</p><p class="note">Je betaalt bij het afhalen. Ik stuur je het adres na mijn bevestiging.</p>
         </aside>
       </div>
     </div>
@@ -362,13 +363,13 @@ footer small { font-size: .9rem; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
           <span class="t-label">Waar</span>
           <span class="t-value">Amsterdam West</span>
-          <span class="t-note">Het afhaaladres ontvang je via WhatsApp nadat je bestelling is bevestigd.</span>
+          <span class="t-note">Ik stuur je het afhaaladres via WhatsApp zodra ik je bestelling heb bevestigd.</span>
         </div>
         <div class="tile">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <span class="t-label">Elke dag · op afspraak</span>
+          <span class="t-label">Elke dag op afspraak</span>
           <span class="t-value">21:00 uur</span>
-          <span class="t-note">Bestellen tot 21:00. Bereiding duurt ongeveer 1–2 uur. Afhalen kan uitsluitend op de tijd die Nasra bevestigt; een late bestelling garandeert geen late afhaaltijd.</span><a class="btn sm" href="https://wa.me/31685477929" target="_blank" rel="noopener">Vraag naar beschikbaarheid</a>
+          <span class="t-note">Je kunt tot 21:00 bij mij bestellen. Ik heb ongeveer 1 tot 2 uur nodig om je maaltijd te bereiden. Ik spreek de afhaaltijd met je af via WhatsApp, ook als je later op de avond bestelt.</span><a class="btn sm" href="https://wa.me/31685477929" target="_blank" rel="noopener">Vraag mij wat er mogelijk is</a>
         </div>
       </div>
     </div>
@@ -391,13 +392,13 @@ footer small { font-size: .9rem; }
 
   <section class="block" id="contact" aria-labelledby="h-contact">
     <div class="wrap">
-      <div class="head"><span class="label">Stuur een bericht</span><h2 id="h-contact">Contact</h2></div>
+      <div class="head"><span class="label">Stuur mij een bericht</span><h2 id="h-contact">Contact</h2></div>
       <div class="tiles">
         <div class="tile">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12Z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 1c-1-.4-2.6-2-3-3l1-1-1-2Z"/></svg>
           <span class="t-label">WhatsApp</span>
           <span class="t-value" id="phone">0031 6 85 47 79 29</span>
-          <a class="btn sm" href="https://wa.me/31685477929" target="_blank" rel="noopener">Stuur een WhatsApp</a><button class="btn sm ghost" id="copy-phone" type="button">Kopieer nummer</button>
+          <a class="btn sm" href="https://wa.me/31685477929" target="_blank" rel="noopener">Stuur mij een WhatsApp</a><button class="btn sm ghost" id="copy-phone" type="button">Kopieer nummer</button>
         </div>
         <div class="tile">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H9l-5 4Z"/><path d="M8 10h8M8 13h5"/></svg>
@@ -409,7 +410,7 @@ footer small { font-size: .9rem; }
   </section>
 </main>
 
-<div class="stripe" aria-hidden="true"></div>
+
 <footer>
   <div class="wrap">
     <b>Dank je wel!</b>
@@ -482,12 +483,12 @@ footer small { font-size: .9rem; }
         var item = groups[0].items.find(function (it) { return it.id === id; });
         input.id = 'drink-' + key; input.type = 'text'; input.maxLength = 80;
         input.placeholder = 'Bijv. cola, indien beschikbaar'; input.value = drinkPrefs[key] || '';
-        label.htmlFor = input.id; label.appendChild(document.createTextNode('Drankvoorkeur · ' + item.name + ' ' + (i + 1)));
+        label.htmlFor = input.id; label.appendChild(document.createTextNode('Drankvoorkeur bij ' + item.name + ' ' + (i + 1)));
         (function (k, el) { el.addEventListener('input', function () { drinkPrefs[k] = el.value; updateLink(); }); })(key, input);
         label.appendChild(input); drinksEl.appendChild(label);
       }
     });
-    if (drinksEl.childNodes.length) { var note = document.createElement('p'); note.className = 'note'; note.textContent = 'Bij elk hoofdgerecht zit een drankje. Geef per maaltijd je voorkeur door; Nasra bevestigt welke drankjes inbegrepen en beschikbaar zijn.'; drinksEl.appendChild(note); }
+    if (drinksEl.childNodes.length) { var note = document.createElement('p'); note.className = 'note'; note.textContent = 'Bij elk hoofdgerecht geef ik je een drankje. Vertel me je voorkeur per maaltijd. Ik laat je weten welke drankjes inbegrepen en beschikbaar zijn.'; drinksEl.appendChild(note); }
   }
   function updateLink() { wa.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(message()); }
 
@@ -502,7 +503,7 @@ footer small { font-size: .9rem; }
   }
   function message() {
     var r = lines(), m = ['Hoi! Ik wil graag bestellen bij ByNass:', ''];
-    r.lines.forEach(function (l) { m.push('• ' + l.text + ' – ' + eur(l.sum)); });
+    r.lines.forEach(function (l) { m.push(l.text + ': ' + eur(l.sum)); });
     m.push('', 'Totaal: ' + eur(r.total));
     if (nameEl.value.trim()) m.push('Naam: ' + nameEl.value.trim());
     if (timeEl.value) m.push('Gewenste afhaaltijd (graag bevestigen): ' + timeEl.value);
