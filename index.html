@@ -213,13 +213,44 @@ footer small { font-size: .9rem; }
 @media (max-width: 800px) { .menu-card { grid-template-columns: 1fr; } .strip { grid-template-columns: repeat(5, 42%); overflow-x: auto; scroll-snap-type: x mandatory; } .strip img { scroll-snap-align: start; } }
 .m-group { border-bottom-width: 1px; border-bottom-color: rgba(35,23,15,.25); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ByNass: Somali blue with warm food photography. */
+:root { --bg:#faf8f3; --band:#eef4fc; --ink:#142e49; --muted:#4b6075; --red:#2265b7; --red-dark:#184e90; --line:rgba(20,46,73,.14); }
+.nav { background:rgba(250,248,243,.96); }
+.brand img { width:64px; height:64px; border-radius:50%; }
+.hero h1 span,.label { color:var(--red); }
+.label::before { background:#4189dd; }
+.stripe { background:linear-gradient(90deg,#4189dd,#82b6ef,#4189dd); }
+.hero-pic .platter { width:100%; max-width:100%; margin:0; }
+.strip figure { margin:0; min-width:0; background:white; border-radius:16px; overflow:hidden; border:1px solid var(--line); }
+.strip .photo { aspect-ratio:1; padding:12px; display:grid; place-items:center; background:#fff; }
+.strip .photo img { width:100%; height:100%; aspect-ratio:auto; object-fit:contain; border-radius:8px; }
+.strip figcaption { padding:10px 8px 14px; text-align:center; font-family:var(--head); font-weight:600; font-size:1rem; }
+.qty button { width:44px; height:44px; }
+.qty output { min-width:22px; }
+.basket label,.basket .note,.pick-group h3,.chips li { font-size:.9rem; }
+#included-drinks { display:grid; gap:12px; }
+#included-drinks:empty { display:none; }
+.basket textarea { font:inherit; font-size:1rem; width:100%; max-width:100%; padding:12px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); resize:vertical; }
+.basket textarea:focus-visible,.basket select:focus-visible { outline:2px solid var(--red); outline-offset:2px; }
+@media(max-width:680px) {
+ .brand img { width:56px; height:56px; }
+ .nav .wrap { gap:10px; }
+ .hero h1 { font-size:clamp(2.6rem,11vw,4rem); }
+ .item { grid-template-columns:minmax(0,1fr) auto; gap:6px 10px; padding:14px 0; }
+ .item .name { grid-column:1; } .item .p { grid-column:1; grid-row:auto; }
+ .item .qty { grid-column:2; grid-row:span 2; }
+ .pick { padding:8px 16px; } .basket { padding:20px; }
+ .strip { grid-template-columns:repeat(5,minmax(145px,42%)); }
+ .strip figure { scroll-snap-align:start; }
+}
 </style>
 </head>
 <body>
 
 <nav class="nav" aria-label="Hoofdmenu">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="img/logo.png" alt="" width="42" height="42">ByNass</a>
+    <a class="brand" href="#top"><img src="data:image/webp;base64,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" alt="" width="64" height="64">ByNass</a>
     <ul>
       <li><a href="#menu">Menu</a></li>
       <li><a href="#bestellen">Bestellen</a></li>
@@ -235,14 +266,14 @@ footer small { font-size: .9rem; }
   <div class="wrap">
     <div class="hero-text">
       <h1>Somalisch eten, <span>zoals thuis.</span></h1>
-      <p>Elke dag vers gekookt door Nasra. Afhalen in Amsterdam West.</p>
+      <p>Elke dag vers gekookt door Nasra. Afhalen in Amsterdam West, op afspraak.</p>
       <div class="cta">
         <a class="btn" href="#bestellen">Bestel nu</a>
         <a class="btn ghost" href="#menu">Bekijk menu</a>
       </div>
       <ul class="chips">
         <li>Bestellen tot 21:00</li>
-        <li>Klaar in 1–2 uur</li>
+        <li>Afhaaltijd na bevestiging</li>
         <li>Amsterdam West</li>
       </ul>
     </div>
@@ -258,27 +289,27 @@ footer small { font-size: .9rem; }
     <div class="wrap">
       <div class="head"><h2 id="h-menu">Menu</h2></div>
       <div class="strip" aria-label="Foto's van gerechten">
-        <img class="cut" src="img/vlees.webp" alt="Gebakken vlees met ui, paprika en citroen">
-        <img src="img/kip-muufo.jpg" alt="Kip met muufo en salade">
-        <img class="cut" src="img/sambusa-bord.webp" alt="Sambusa">
-        <img src="img/canjeero-spiraal.jpg" alt="Canjeero">
-        <img src="img/malawax-honing.jpg" alt="Malawax met honing">
+        <figure><div class="photo"><img class="cut" src="img/vlees.webp" alt="Schaal met vlees, ui, paprika en citroen" loading="lazy"></div><figcaption>Vlees</figcaption></figure>
+        <figure><div class="photo"><img src="img/kip-muufo.jpg" alt="Kip met muufo" loading="lazy"></div><figcaption>Kip met muufo</figcaption></figure>
+        <figure><div class="photo"><img src="img/sambusa-bord.webp" alt="Sambusa" loading="lazy"></div><figcaption>Sambusa</figcaption></figure>
+        <figure><div class="photo"><img src="img/canjeero-spiraal.jpg" alt="Canjeero" loading="lazy"></div><figcaption>Canjeero</figcaption></figure>
+        <figure><div class="photo"><img src="img/malawax-honing.jpg" alt="Malawax" loading="lazy"></div><figcaption>Malawax</figcaption></figure>
       </div>
       <div class="menu-card">
         <div class="m-col">
           <h3 class="m-group">Hoofdgerechten <small>met salade &amp; drankje</small></h3>
           <ul class="m-list">
-          <li><div class="m-name"><span>Rijst met Vlees</span></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€22</span></li>
-          <li><div class="m-name"><span>Rijst met Kip</span></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€19</span></li>
-          <li><div class="m-name"><span>Pasta</span></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€15</span></li>
+          <li><div class="m-name"><span>Rijst met Vlees</span><small>Een rijstmaaltijd met vlees, salade en een drankje. Vraag naar de vleessoort van vandaag.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€22</span></li>
+          <li><div class="m-name"><span>Rijst met Kip</span><small>Een rijstmaaltijd met kip, salade en een drankje.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€19</span></li>
+          <li><div class="m-name"><span>Pasta</span><small>Een pastamaaltijd met salade en een drankje. Vraag naar de bereiding van vandaag.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€15</span></li>
           </ul>
           <h3 class="m-group">Extra's</h3>
           <ul class="m-list">
-          <li><div class="m-name"><span>Sambusa</span><small>2 stuks</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€5</span></li>
-          <li><div class="m-name"><span>Mash Mash</span><small>dik &amp; krokant</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€1,50</span></li>
-          <li><div class="m-name"><span>Muufo</span><small>2 stuks</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€3</span></li>
-          <li><div class="m-name"><span>Canjeero</span><small>6 stuks</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€4</span></li>
-          <li><div class="m-name"><span>Malawax</span><small>6 stuks</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€4</span></li>
+          <li><div class="m-name"><span>Sambusa</span><small>2 gevulde, krokante driehoekjes. Vraag naar de vulling.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€5</span></li>
+          <li><div class="m-name"><span>Mash Mash</span><small>Dik &amp; krokant gebak. Vraag naar de bereiding.</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€1,50</span></li>
+          <li><div class="m-name"><span>Muufo</span><small>2 stuks Somalisch brood</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€3</span></li>
+          <li><div class="m-name"><span>Canjeero</span><small>6 luchtige Somalische pannenkoekjes</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€4</span></li>
+          <li><div class="m-name"><span>Malawax</span><small>6 dunne, zoete pannenkoekjes</small></div><span class="m-dots" aria-hidden="true"></span><span class="m-price">€4</span></li>
           </ul>
         </div>
         <div class="m-col">
@@ -310,11 +341,14 @@ footer small { font-size: .9rem; }
           <ul id="basket-list"><li class="empty">Nog niets gekozen.</li></ul>
           <div class="total"><span>Totaal</span><b id="total">€0,00</b></div>
           <div class="fields">
-            <label for="o-name">Naam<input id="o-name" type="text" autocomplete="name" placeholder="Amina"></label>
-            <label for="o-time">Ophalen om<input id="o-time" type="time" min="10:00" max="23:00"></label>
+            <label for="o-name">Naam<input id="o-name" type="text" autocomplete="name" placeholder="Jouw naam" maxlength="80"></label>
+            <label for="o-time">Gewenste afhaaltijd<input id="o-time" type="time" aria-describedby="pickup-note"></label>
           </div>
+          <div id="included-drinks"></div>
+          <label for="o-notes">Opmerkingen of allergieën<textarea id="o-notes" rows="3" maxlength="500" placeholder="Bijvoorbeeld een vraag over ingrediënten"></textarea></label>
+          <p class="note" id="pickup-note">Elke dag afhalen op afspraak. Reken op ongeveer 1–2 uur bereiding; Nasra bevestigt de beschikbaarheid en je afhaaltijd.</p>
           <a class="btn" id="wa-btn" href="https://wa.me/31685477929" target="_blank" rel="noopener" aria-disabled="true">Verstuur via WhatsApp</a>
-          <p class="note">Betalen bij afhalen</p>
+          <p class="note">Je bestelling is definitief na onze bevestiging via WhatsApp.</p><p class="note">Betalen bij afhalen. Het adres ontvang je na bevestiging.</p>
         </aside>
       </div>
     </div>
@@ -328,13 +362,13 @@ footer small { font-size: .9rem; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
           <span class="t-label">Waar</span>
           <span class="t-value">Amsterdam West</span>
-          <span class="t-note">Adres na bevestiging</span>
+          <span class="t-note">Het afhaaladres ontvang je via WhatsApp nadat je bestelling is bevestigd.</span>
         </div>
         <div class="tile">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <span class="t-label">Bestellen tot</span>
+          <span class="t-label">Elke dag · op afspraak</span>
           <span class="t-value">21:00 uur</span>
-          <span class="t-note">Klaar binnen 1–2 uur</span>
+          <span class="t-note">Bestellen tot 21:00. Bereiding duurt ongeveer 1–2 uur. Afhalen kan uitsluitend op de tijd die Nasra bevestigt; een late bestelling garandeert geen late afhaaltijd.</span><a class="btn sm" href="https://wa.me/31685477929" target="_blank" rel="noopener">Vraag naar beschikbaarheid</a>
         </div>
       </div>
     </div>
@@ -363,7 +397,7 @@ footer small { font-size: .9rem; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12Z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 1c-1-.4-2.6-2-3-3l1-1-1-2Z"/></svg>
           <span class="t-label">WhatsApp</span>
           <span class="t-value" id="phone">0031 6 85 47 79 29</span>
-          <button class="btn sm ghost" id="copy-phone" type="button">Kopieer nummer</button>
+          <a class="btn sm" href="https://wa.me/31685477929" target="_blank" rel="noopener">Stuur een WhatsApp</a><button class="btn sm ghost" id="copy-phone" type="button">Kopieer nummer</button>
         </div>
         <div class="tile">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H9l-5 4Z"/><path d="M8 10h8M8 13h5"/></svg>
@@ -439,6 +473,23 @@ footer small { font-size: .9rem; }
 
   var list = document.getElementById('basket-list'), totalEl = document.getElementById('total'), wa = document.getElementById('wa-btn');
   var nameEl = document.getElementById('o-name'), timeEl = document.getElementById('o-time');
+  var notesEl = document.getElementById('o-notes'), drinksEl = document.getElementById('included-drinks'), drinkPrefs = {};
+  function renderDrinks() {
+    drinksEl.textContent = '';
+    ['vlees', 'kip', 'pasta'].forEach(function (id) {
+      for (var i = 0; i < qty[id]; i++) {
+        var key = id + '-' + i, label = document.createElement('label'), input = document.createElement('input');
+        var item = groups[0].items.find(function (it) { return it.id === id; });
+        input.id = 'drink-' + key; input.type = 'text'; input.maxLength = 80;
+        input.placeholder = 'Bijv. cola, indien beschikbaar'; input.value = drinkPrefs[key] || '';
+        label.htmlFor = input.id; label.appendChild(document.createTextNode('Drankvoorkeur · ' + item.name + ' ' + (i + 1)));
+        (function (k, el) { el.addEventListener('input', function () { drinkPrefs[k] = el.value; updateLink(); }); })(key, input);
+        label.appendChild(input); drinksEl.appendChild(label);
+      }
+    });
+    if (drinksEl.childNodes.length) { var note = document.createElement('p'); note.className = 'note'; note.textContent = 'Bij elk hoofdgerecht zit een drankje. Geef per maaltijd je voorkeur door; Nasra bevestigt welke drankjes inbegrepen en beschikbaar zijn.'; drinksEl.appendChild(note); }
+  }
+  function updateLink() { wa.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(message()); }
 
   function lines() {
     var out = [], total = 0;
@@ -454,7 +505,15 @@ footer small { font-size: .9rem; }
     r.lines.forEach(function (l) { m.push('• ' + l.text + ' – ' + eur(l.sum)); });
     m.push('', 'Totaal: ' + eur(r.total));
     if (nameEl.value.trim()) m.push('Naam: ' + nameEl.value.trim());
-    if (timeEl.value) m.push('Ophalen om: ' + timeEl.value);
+    if (timeEl.value) m.push('Gewenste afhaaltijd (graag bevestigen): ' + timeEl.value);
+    ['vlees', 'kip', 'pasta'].forEach(function (id) {
+      for (var i = 0; i < qty[id]; i++) {
+        var pref = (drinkPrefs[id + '-' + i] || '').trim();
+        if (pref) m.push('Drankvoorkeur bij ' + groups[0].items.find(function(it) { return it.id === id; }).name + ' ' + (i + 1) + ': ' + pref);
+      }
+    });
+    if (notesEl.value.trim()) m.push('Opmerkingen / allergieën: ' + notesEl.value.trim());
+    m.push('', 'Graag de beschikbaarheid, afhaaltijd en het adres bevestigen.');
     return m.join('\n');
   }
   function render() {
@@ -463,10 +522,13 @@ footer small { font-size: .9rem; }
     if (!r.lines.length) { var e = document.createElement('li'); e.className = 'empty'; e.textContent = 'Nog niets gekozen.'; list.appendChild(e); }
     r.lines.forEach(function (l) { var li = document.createElement('li'); var a = document.createElement('span'); a.textContent = l.text; var b = document.createElement('span'); b.textContent = eur(l.sum); li.append(a, b); list.appendChild(li); });
     totalEl.textContent = eur(r.total);
+    renderDrinks();
     wa.setAttribute('aria-disabled', r.lines.length ? 'false' : 'true');
+    wa.tabIndex = r.lines.length ? 0 : -1;
     wa.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(message());
   }
-  [nameEl, timeEl].forEach(function (el) { el.addEventListener('input', render); });
+  [nameEl, timeEl, notesEl].forEach(function (el) { el.addEventListener('input', updateLink); });
+  wa.addEventListener('click', function(e) { if (!lines().lines.length) e.preventDefault(); });
 
   document.getElementById('copy-phone').addEventListener('click', function () {
     var btn = this;
@@ -482,7 +544,7 @@ footer small { font-size: .9rem; }
     else { var pr = hv.play(); if (pr && pr.catch) pr.catch(function () {}); }
   }
 
-  ['vlees', 'sambusa'].forEach(function (id) { qty[id] = 1; document.getElementById('q-' + id).textContent = '1'; });
+  
   render();
 })();
 </script>
