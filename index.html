@@ -351,6 +351,22 @@ footer small { font-size: .9rem; }
 @media(max-width:480px) { .m-serving-photo { width:64px;height:64px;border-radius:10px; } }
 .tile .t-value a { color:inherit; text-decoration:none; }
 .tile .t-value a:hover { text-decoration:underline; }
+
+.social-panel { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; }
+.social-panel h3 { font-size:1.35rem; }
+.social-panel p { color:var(--muted); margin:4px 0 22px; font-size:1rem; }
+.social-links { display:grid; gap:12px; }
+.social-link { display:flex; align-items:center; gap:16px; padding:16px; border:1px solid var(--line); border-radius:16px; text-decoration:none; color:var(--ink); background:var(--bg); transition:transform .15s,box-shadow .15s; }
+.social-link:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(20,46,73,.09); }
+.social-link:focus-visible { outline:3px solid var(--red); outline-offset:3px; }
+.social-icon { display:grid; place-items:center; width:52px; height:52px; border-radius:15px; flex:none; }
+.social-icon svg { width:28px; height:28px; }
+.social-instagram .social-icon { color:#fff; background:linear-gradient(140deg,#7739cf,#d52b7c 55%,#f6a343); }
+.social-snapchat .social-icon { color:#161616; background:#fffc00; }
+.social-copy { display:grid; gap:2px; }
+.social-copy strong { font-family:var(--head); font-size:1.05rem; }
+.social-copy>span { color:var(--muted); font-size:.95rem; }
+@media(prefers-reduced-motion:reduce) { .social-link { transition:none; } .social-link:hover { transform:none; } }
 </style>
 </head>
 <body>
@@ -486,14 +502,19 @@ footer small { font-size: .9rem; }
           <span class="t-value" id="phone">0031 6 85 47 79 29</span>
           <a class="btn sm" href="https://wa.me/31685477929" target="_blank" rel="noopener">Stuur mij een WhatsApp</a><button class="btn sm ghost" id="copy-phone" type="button">Kopieer nummer</button>
         </div>
-        <div class="tile">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H9l-5 4Z"/><path d="M8 10h8M8 13h5"/></svg>
-          <span class="t-label">Snapchat</span>
-          <span class="t-value"><a href="https://www.snapchat.com/add/bynass08" target="_blank" rel="noopener">@bynass08</a></span>
-        </div>
-        <div class="tile">
-          <span class="t-label">Instagram</span>
-          <span class="t-value"><a href="https://www.instagram.com/bynass08/" target="_blank" rel="noopener">@bynass08</a></span>
+        <div class="social-panel">
+          <h3>Volg ByNass</h3>
+          <p>Een kijkje in mijn keuken.</p>
+          <div class="social-links">
+            <a class="social-link social-instagram" href="https://www.instagram.com/bynass08/" target="_blank" rel="noopener" aria-label="ByNass op Instagram, @bynass08">
+              <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></span>
+              <span class="social-copy"><strong>Instagram</strong><span>@bynass08</span></span>
+            </a>
+            <a class="social-link social-snapchat" href="https://www.snapchat.com/add/bynass08" target="_blank" rel="noopener" aria-label="ByNass op Snapchat, @bynass08">
+              <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5c-3 0-4.7 2.1-4.7 5.2 0 .7.1 1.5.1 2.2-.5.2-1.2-.5-1.8-.4-.8.1-.9 1-.2 1.5.6.4 1.5.5 1.7 1.1.4 1.2-1.8 3.9-4.1 4.3-.5.1-.6.8-.1 1.1.8.5 1.8.6 2.7.8.3.1.2 1.2.7 1.3.7.1 1.2-.2 2.1-.1 1.3.1 2.2 1.5 3.6 1.5s2.3-1.4 3.6-1.5c.9-.1 1.4.2 2.1.1.5-.1.4-1.2.7-1.3.9-.2 1.9-.3 2.7-.8.5-.3.4-1-.1-1.1-2.3-.4-4.5-3.1-4.1-4.3.2-.6 1.1-.7 1.7-1.1.7-.5.6-1.4-.2-1.5-.6-.1-1.3.6-1.8.4 0-.7.1-1.5.1-2.2 0-3.1-1.7-5.2-4.7-5.2Z"/></svg></span>
+              <span class="social-copy"><strong>Snapchat</strong><span>@bynass08</span></span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
