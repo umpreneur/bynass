@@ -282,6 +282,23 @@ footer small { font-size: .9rem; }
  .hero-wok { object-position:65% center; }
  .hero::after { background:linear-gradient(180deg,var(--bg) 0%,var(--bg) 48%,rgba(250,248,243,.9) 56%,transparent 72%,var(--bg) 100%); }
 }
+
+/* Feather every edge of the footage into the page background. */
+.hero .wrap .hero-pic {
+ border:0; border-radius:0; box-shadow:none; background:transparent;
+ -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 24%,#000 88%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 14%,#000 76%,transparent 100%);
+ -webkit-mask-composite:source-in;
+ mask-image:linear-gradient(to right,transparent 0%,#000 24%,#000 88%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 14%,#000 76%,transparent 100%);
+ mask-composite:intersect;
+}
+.hero-wok { border:0; border-radius:0; box-shadow:none; }
+@media(max-width:680px) {
+ .hero .wrap .hero-pic {
+  left:-20px; right:-20px; height:380px;
+  -webkit-mask-image:radial-gradient(ellipse 70% 65% at 60% 50%,#000 35%,transparent 78%);
+  mask-image:radial-gradient(ellipse 70% 65% at 60% 50%,#000 35%,transparent 78%);
+ }
+}
 </style>
 </head>
 <body>
